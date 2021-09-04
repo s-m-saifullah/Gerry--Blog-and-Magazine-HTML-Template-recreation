@@ -11344,7 +11344,7 @@ a {
   }
 }
 .offcanvas-header {
-  margin-top: 15px;
+  margin-top: 5px;
   display: block;
   position: relative;
 }
@@ -11372,7 +11372,7 @@ a {
 .offcanvas-header .offcanvas-close {
   position: absolute;
   right: 10px;
-  top: 0px;
+  top: 10px;
   width: 30px;
   height: 30px;
   text-align: center;
@@ -11387,27 +11387,28 @@ a {
 .offcanvas hr {
   color: #e6e6e6;
   opacity: 1;
-  margin-top: -1px;
+  margin-top: -6px;
 }
-.offcanvas .offcanvas-body {
+.offcanvas-body {
+  padding-top: 0;
   padding-right: 0;
   padding-left: 0;
 }
-.offcanvas .offcanvas-body .nav-item {
+.offcanvas-body .nav-item {
   transition: 0.4s;
 }
-.offcanvas .offcanvas-body .nav-item .sub-menu {
+.offcanvas-body .nav-item .sub-menu {
   padding-left: 0;
   background-color: #fcfcfc;
   box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.75) inset;
 }
-.offcanvas .offcanvas-body .nav-item .sub-menu .nav-link {
+.offcanvas-body .nav-item .sub-menu .nav-link {
   padding-left: 32px;
 }
-.offcanvas .offcanvas-body .nav-item .nav-link {
+.offcanvas-body .nav-item .nav-link {
   position: relative;
 }
-.offcanvas .offcanvas-body .nav-item .nav-link:not(:last-child):after {
+.offcanvas-body .nav-item .nav-link:not(:last-child):after {
   position: absolute;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -11417,7 +11418,7 @@ a {
   transform: translateY(-50%);
   color: rgba(0, 0, 0, 0.6);
 }
-.offcanvas .offcanvas-body .nav-item .nav-link:hover {
+.offcanvas-body .nav-item .nav-link:hover {
   background-color: rgba(0, 0, 0, 0.02);
 }
 

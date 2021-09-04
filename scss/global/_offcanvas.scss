@@ -10,7 +10,7 @@
   }
 
   &-header {
-    margin-top: 15px;
+    margin-top: 5px;
     display: block;
     position: relative;
 
@@ -42,7 +42,7 @@
     .offcanvas-close {
       position: absolute;
       right: 10px;
-      top: 0px;
+      top: 10px;
       width: 30px;
       height: 30px;
       text-align: center;
@@ -58,10 +58,11 @@
   hr {
     color: #e6e6e6;
     opacity: 1;
-    margin-top: -1px;
+    margin-top: -6px;
   }
 
-  .offcanvas-body {
+  &-body {
+    padding-top: 0;
     padding-right: 0;
     padding-left: 0;
     .nav-item {
