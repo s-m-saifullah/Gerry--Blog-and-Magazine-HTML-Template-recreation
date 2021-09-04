@@ -26,7 +26,12 @@
             </div>
           </div>
           <div class="col-6 col-lg-4 order-2 order-lg-1">
-            <div class="header_menu">
+            <div
+              class="header_menu ms-auto ms-lg-0 me-lg-auto"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample"
+            >
               <i class="fas fa-bars"></i
               ><span class="d-none d-lg-inline-block">Menu</span>
             </div>
@@ -63,6 +68,125 @@
         <hr />
       </div>
     </header>
+
+    <!--///////////////////////////////////////////////////////
+    ///////////////////////// OFFCANVAS ///////////////////////
+     /////////////////////////////////////////////////////// -->
+    <section
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <a href="#"
+          ><img class="img-fluid" src="assets/images/logo.webp" alt=""
+        /></a>
+        <ul class="offcanvas_social">
+          <li>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-google-plus-g"></i>
+            </a>
+          </li>
+        </ul>
+        <div
+          class="offcanvas-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <hr />
+      <div class="offcanvas-body">
+        <!-- OFFCANVAS NAV -->
+
+        <ul class="nav flex-column">
+          <!-- HOME PAGE SUBMENU -->
+          <li class="nav-item">
+            <a
+              href="#sub-menu-1"
+              class="nav-link"
+              role="button"
+              data-bs-toggle="collapse"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              >Home Pages</a
+            >
+            <ul id="sub-menu-1" class="sub-menu collapse">
+              <li><a class="nav-link" href="#">Home 1</a></li>
+              <li><a class="nav-link" href="#">Home 2</a></li>
+              <li><a class="nav-link" href="#">Home 3</a></li>
+            </ul>
+          </li>
+
+          <!-- SINGLE PAGE SUBMENU -->
+          <li class="nav-item">
+            <a
+              href="#sub-menu-2"
+              class="nav-link"
+              role="button"
+              data-bs-toggle="collapse"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              >Single Pages</a
+            >
+            <ul id="sub-menu-2" class="sub-menu collapse">
+              <li><a class="nav-link" href="#">Single 1</a></li>
+              <li><a class="nav-link" href="#">Single 2</a></li>
+            </ul>
+          </li>
+
+          <!-- ARCHIVE PAGE SUBMENU -->
+          <li class="nav-item">
+            <a
+              href="#sub-menu-3"
+              class="nav-link"
+              role="button"
+              data-bs-toggle="collapse"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              >Archive</a
+            >
+            <ul id="sub-menu-3" class="sub-menu collapse">
+              <li><a class="nav-link" href="#">Category</a></li>
+              <li><a class="nav-link" href="#">Tags</a></li>
+              <li><a class="nav-link" href="#">Author</a></li>
+            </ul>
+          </li>
+
+          <!-- PAGES SUBMENU -->
+          <li class="nav-item">
+            <a
+              href="#sub-menu-4"
+              class="nav-link"
+              role="button"
+              data-bs-toggle="collapse"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              >Pages</a
+            >
+            <ul id="sub-menu-4" class="sub-menu collapse">
+              <li><a class="nav-link" href="#">Search</a></li>
+              <li><a class="nav-link" href="#">Typography</a></li>
+              <li><a class="nav-link" href="#">404</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </section>
 
     <script src="assets/js/vendors/jQuery/jquery.min.js"></script>
     <script src="assets/js/vendors/bootstrap/bootstrap.bundle.js"></script>

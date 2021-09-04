@@ -11226,6 +11226,15 @@ a {
   text-align: center;
 }
 
+.offcanvas-body .nav-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
+
 #header {
   display: flex;
   align-items: center;
@@ -11236,6 +11245,11 @@ a {
   width: 140px;
   display: block;
   margin: 0 auto;
+}
+@media (max-width: 991.98px) {
+  #header .logo img {
+    margin: initial;
+  }
 }
 #header .header_menu {
   cursor: pointer;
@@ -11318,6 +11332,92 @@ a {
   opacity: 1;
   color: #e6e6e6;
   transform: translateY(15px);
+}
+
+.offcanvas {
+  width: 360px;
+}
+@media (max-width: 767.98px) {
+  .offcanvas {
+    width: 320px;
+  }
+}
+.offcanvas-header {
+  margin-top: 15px;
+  display: block;
+  position: relative;
+}
+.offcanvas-header img {
+  width: 108px;
+}
+.offcanvas-header .offcanvas_social {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  margin-top: 15px;
+}
+.offcanvas-header .offcanvas_social li {
+  margin-right: 15px;
+}
+.offcanvas-header .offcanvas_social li a {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  display: inline-block;
+  transition: 0.3s;
+}
+.offcanvas-header .offcanvas_social li a:hover {
+  color: rgba(0, 0, 0, 0.4);
+}
+.offcanvas-header .offcanvas-close {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.offcanvas-header .offcanvas-close i {
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.05);
+}
+.offcanvas hr {
+  color: #e6e6e6;
+  opacity: 1;
+  margin-top: -1px;
+}
+.offcanvas .offcanvas-body {
+  padding-right: 0;
+  padding-left: 0;
+}
+.offcanvas .offcanvas-body .nav-item {
+  transition: 0.4s;
+}
+.offcanvas .offcanvas-body .nav-item .sub-menu {
+  padding-left: 0;
+  background-color: #fcfcfc;
+  box-shadow: 0px 5px 10px -10 px rgba(0, 0, 0, 0.75) inset;
+}
+.offcanvas .offcanvas-body .nav-item .sub-menu .nav-link {
+  padding-left: 32px;
+}
+.offcanvas .offcanvas-body .nav-item .nav-link {
+  position: relative;
+}
+.offcanvas .offcanvas-body .nav-item .nav-link:not(:last-child):after {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f107";
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.6);
+}
+.offcanvas .offcanvas-body .nav-item .nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.02);
 }
 
 /*# sourceMappingURL=style.css.map */

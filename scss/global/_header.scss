@@ -13,6 +13,10 @@
       width: 140px;
       display: block;
       margin: 0 auto;
+
+      @include media-breakpoint-down(lg) {
+        margin: initial;
+      }
     }
   }
 
@@ -27,8 +31,7 @@
   }
 
   .header_right {
-    display: flex;
-    align-items: center;
+    @include flex-v_center;
     justify-content: flex-end;
 
     .header_social {

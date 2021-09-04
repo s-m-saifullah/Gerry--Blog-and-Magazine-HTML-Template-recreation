@@ -1,0 +1,99 @@
+@use '../custom' as *;
+@use '../components/color' as *;
+@use '../components/mixins' as *;
+
+.offcanvas {
+  width: 360px;
+
+  @include media-breakpoint-down(md) {
+    width: 320px;
+  }
+
+  &-header {
+    margin-top: 15px;
+    display: block;
+    position: relative;
+
+    img {
+      width: 108px;
+    }
+
+    .offcanvas_social {
+      @include flex-v_center;
+      padding-left: 0;
+      margin-top: 15px;
+
+      li {
+        margin-right: 15px;
+
+        a {
+          color: $text_dark;
+          font-size: 14px;
+          display: inline-block;
+          transition: 0.3s;
+
+          &:hover {
+            color: $hover_text_dark;
+          }
+        }
+      }
+    }
+
+    .offcanvas-close {
+      position: absolute;
+      right: 10px;
+      top: 0px;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      border: 1px solid rgba(black, 0.05);
+      border-radius: 50%;
+      cursor: pointer;
+      i {
+        line-height: 30px;
+        color: rgba(black, 0.05);
+      }
+    }
+  }
+  hr {
+    color: #e6e6e6;
+    opacity: 1;
+    margin-top: -1px;
+  }
+
+  .offcanvas-body {
+    padding-right: 0;
+    padding-left: 0;
+    .nav-item {
+      transition: 0.4s;
+
+      .sub-menu {
+        padding-left: 0;
+        background-color: #fcfcfc;
+        box-shadow: 0px 5px 10px -10 px rgba(0, 0, 0, 0.75) inset;
+        .nav-link {
+          padding-left: 32px;
+        }
+      }
+
+      .nav-link {
+        position: relative;
+
+        &:not(:last-child):after {
+          position: absolute;
+          font-family: "Font Awesome\ 5 Free";
+          font-weight: 900;
+          content: "\f107";
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: rgba(black, 0.6);
+        }
+
+        &:hover {
+          background-color: rgba(black, 0.02);
+        }
+      }
+    }
+  }
+}
