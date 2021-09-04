@@ -11399,7 +11399,7 @@ a {
 .offcanvas .offcanvas-body .nav-item .sub-menu {
   padding-left: 0;
   background-color: #fcfcfc;
-  box-shadow: 0px 5px 10px -10 px rgba(0, 0, 0, 0.75) inset;
+  box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.75) inset;
 }
 .offcanvas .offcanvas-body .nav-item .sub-menu .nav-link {
   padding-left: 32px;
