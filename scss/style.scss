@@ -1,0 +1,15 @@
+@use './custom';
+@use './global/reset';
+
+// Importing Components
+@use './components/color';
+@use './components/mixins';
+@use './components/animation';
+@use './components/typography';
+@use './components/buttons';
+
+// GLOBAL SECTIONS
+
+@use './global/header';
+@use './global/offcanvas';
+@use './global/footer';

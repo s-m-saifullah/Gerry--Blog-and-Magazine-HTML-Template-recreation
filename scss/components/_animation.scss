@@ -1,0 +1,19 @@
+@keyframes centerOut {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 85%;
+  }
+}
+
+@keyframes toCenter {
+  0% {
+    width: 85%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}

@@ -1,0 +1,24 @@
+@use '../custom' as *;
+@use '../components/color' as *;
+
+@mixin heading_text {
+  font-family: "Oswald", sans-serif;
+  color: $text_dark;
+}
+
+@mixin flex-v_center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin absolute-center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
