@@ -1,0 +1,30 @@
+{
+  "name": "gerry---blog-and-magazine-html-template",
+  "version": "1.0.0",
+  "description": "Gerry - Blog and Magazine HTML Template Recreation",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:./assets/css/",
+    "autoprefix": "postcss assets/css/style.css --replace --use autoprefixer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaquille19/Gerry---Blog-and-Magazine-HTML-Template-recreation.git"
+  },
+  "author": "S. M. Saifullah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaquille19/Gerry---Blog-and-Magazine-HTML-Template-recreation/issues"
+  },
+  "homepage": "https://github.com/shaquille19/Gerry---Blog-and-Magazine-HTML-Template-recreation#readme",
+  "devDependencies": {
+    "sass": "^1.39.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "autoprefixer": "^10.3.4",
+    "bootstrap": "^5.1.0",
+    "jquery": "^3.6.0",
+    "postcss-cli": "^8.3.1"
+  }
+}
