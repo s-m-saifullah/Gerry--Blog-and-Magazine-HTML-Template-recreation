@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shaquille19/Gerry---Blog-and-Magazine-HTML-Template-recreation.git"
+    "url": "git+https://github.com/shaquille19/Gerry--Blog-and-Magazine-HTML-Template-recreation.git"
   },
   "author": "S. M. Saifullah",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shaquille19/Gerry---Blog-and-Magazine-HTML-Template-recreation/issues"
+    "url": "https://github.com/shaquille19/Gerry--Blog-and-Magazine-HTML-Template-recreation/issues"
   },
-  "homepage": "https://github.com/shaquille19/Gerry---Blog-and-Magazine-HTML-Template-recreation#readme",
+  "homepage": "https://github.com/shaquille19/Gerry--Blog-and-Magazine-HTML-Template-recreation#readme",
   "devDependencies": {
     "sass": "^1.39.0"
   },
