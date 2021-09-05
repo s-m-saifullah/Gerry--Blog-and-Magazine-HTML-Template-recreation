@@ -11496,6 +11496,12 @@ a:hover {
   top: 70px;
   z-index: -2;
 }
+@media (max-width: 991.98px) {
+  .lifestyle::after {
+    width: 250px;
+    height: 286px;
+  }
+}
 @media (max-width: 767.98px) {
   .lifestyle::after {
     display: none;

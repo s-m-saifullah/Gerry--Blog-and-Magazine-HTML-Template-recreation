@@ -23,6 +23,11 @@
     top: 70px;
     z-index: -2;
 
+    @include media-breakpoint-down(lg) {
+      width: 250px;
+      height: 286px;
+    }
+
     @include media-breakpoint-down(md) {
       display: none;
     }
