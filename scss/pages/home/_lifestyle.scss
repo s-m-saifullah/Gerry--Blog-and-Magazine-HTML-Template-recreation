@@ -23,7 +23,7 @@
     top: 70px;
     z-index: -2;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       width: 250px;
       height: 286px;
     }
