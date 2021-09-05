@@ -13,7 +13,9 @@
 @use './global/header';
 @use './global/offcanvas';
 @use './global/footer';
+@use './global/section_heading';
 
 // HOMEPAGE SECTIONS
 
 @use './pages/home/lifestyle';
+@use './pages/home/editors_pick';

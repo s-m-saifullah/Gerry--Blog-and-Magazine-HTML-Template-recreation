@@ -22,3 +22,31 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin pseudoTopRight($top, $right) {
+  content: "";
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin pseudoTopLeft($top, $left) {
+  content: "";
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin pseudoBottomRight($bottom, $right) {
+  content: "";
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin pseudoBottomLeft($bottom, $left) {
+  content: "";
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+}
