@@ -7,11 +7,24 @@
 // font-family: 'Rubik', sans-serif
 // font-family: 'Montserrat', sans-serif;
 
+/* 
 /////////////
 // GLOBAL //
-////////////
+//////////// 
+*/
 
-// Section Heading Styles
+/* Section Watermark */
+
+.watermark {
+  font-family: "Oswald", sans-serif;
+  font-size: 88px;
+  color: $text_light;
+  line-height: 1.4;
+  letter-spacing: 33px;
+  text-transform: uppercase;
+}
+
+/* Section Heading Styles */
 
 .section_heading {
   @include heading_text;
@@ -58,18 +71,45 @@
   }
 }
 
-// Blog Heading Small
-
-.blog-grid-heading-sm {
+/* Blog Heading Medium */
+.blog-grid-heading-md {
   @include heading_text;
   font-weight: 500;
   font-size: 30px;
   line-height: 1.4;
 
+  @include media-breakpoint-down(lg) {
+    font-size: 20px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 24px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+  }
+}
+
+/* Blog Heading Small */
+
+.blog-grid-heading-sm {
+  @include heading_text;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+
   @include media-breakpoint-down(md) {
     font-size: 20px;
-    line-height: 1.4;
   }
+}
+
+/* Blog Heading Light */
+.blog-grid-heading-light {
+  @include heading_text;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 400;
 }
 
 /////////////
