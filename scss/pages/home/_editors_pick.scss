@@ -173,6 +173,10 @@
         background-color: $primary;
         z-index: -1;
 
+        @include media-breakpoint-up(xl) {
+          left: 48%;
+        }
+
         @include media-breakpoint-down(xl) {
           left: 63%;
         }
@@ -207,6 +211,7 @@
 
       .post__title {
         position: relative;
+        max-width: 235px;
         left: 160px;
         top: -18px;
 
@@ -220,17 +225,18 @@
 
         @include media-breakpoint-down(md) {
           left: 38%;
-          max-width: 350px;
+          max-width: 300px;
         }
 
         @include media-breakpoint-down(sm) {
           position: initial;
           margin-top: 10px;
+          max-width: 100%;
         }
 
         .p_head_style {
+          position: initial;
           &::after {
-            bottom: initial;
             top: 6px;
 
             @include media-breakpoint-down(md) {

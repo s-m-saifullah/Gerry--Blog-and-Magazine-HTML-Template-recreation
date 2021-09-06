@@ -11971,6 +11971,11 @@ p {
   background-color: #ffcc0d;
   z-index: -1;
 }
+@media (min-width: 1200px) {
+  .editors_pick__right .post-2::after {
+    left: 48%;
+  }
+}
 @media (max-width: 1199.98px) {
   .editors_pick__right .post-2::after {
     left: 63%;
@@ -12009,6 +12014,7 @@ p {
 }
 .editors_pick__right .post-2 .post__title {
   position: relative;
+  max-width: 235px;
   left: 160px;
   top: -18px;
 }
@@ -12025,17 +12031,20 @@ p {
 @media (max-width: 767.98px) {
   .editors_pick__right .post-2 .post__title {
     left: 38%;
-    max-width: 350px;
+    max-width: 300px;
   }
 }
 @media (max-width: 575.98px) {
   .editors_pick__right .post-2 .post__title {
     position: initial;
     margin-top: 10px;
+    max-width: 100%;
   }
 }
+.editors_pick__right .post-2 .post__title .p_head_style {
+  position: initial;
+}
 .editors_pick__right .post-2 .post__title .p_head_style::after {
-  bottom: initial;
   top: 6px;
 }
 @media (max-width: 767.98px) {
