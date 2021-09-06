@@ -1,0 +1,29 @@
+@use '../custom' as *;
+@use '../components/color' as *;
+
+.p_head_style {
+  position: relative;
+  display: inline;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: $primary;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      height: 15px;
+    }
+
+    @-moz-document url-prefix() {
+      height: 35%;
+    }
+  }
+}

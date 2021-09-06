@@ -6,6 +6,14 @@
   color: $text_dark;
 }
 
+@mixin post_heading($font-size, $line-height) {
+  font-family: "Oswald", sans-serif;
+  color: $text_dark;
+  font-weight: 500;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
 @mixin flex-v_center {
   display: flex;
   align-items: center;

@@ -38,25 +38,6 @@
       h3 {
         position: relative;
         z-index: 2;
-        a {
-          position: relative;
-          display: inline;
-
-          &::after {
-            position: absolute;
-            content: "";
-            height: 15px;
-            width: 100%;
-            background-color: $primary;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-
-            @include media-breakpoint-down(sm) {
-              display: none;
-            }
-          }
-        }
       }
     }
   }
@@ -176,6 +157,8 @@
     }
     .post__title {
       a {
+        cursor: text;
+
         &::after {
           height: 10px;
         }

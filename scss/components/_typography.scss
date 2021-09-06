@@ -2,15 +2,10 @@
 @use '../components/color' as *;
 @use '../components/mixins' as *;
 
-// font-family: 'Oswald', sans-serif;
-// font-family: 'Roboto', sans-serif;
-// font-family: 'Rubik', sans-serif
-// font-family: 'Montserrat', sans-serif;
-
 /* 
-/////////////
-// GLOBAL //
-//////////// 
+///////////////////////
+// GLOBAL TYPOGRAPHY //
+/////////////////////// 
 */
 
 /* Section Watermark */
@@ -53,10 +48,7 @@
 // Blog Heading Large
 
 .blog-grid-heading-lg {
-  @include heading_text;
-  font-weight: 500;
-  font-size: 38px;
-  line-height: 1.3;
+  @include post_heading(38px, 10.3s);
 
   @include media-breakpoint-down(lg) {
     font-size: 24px;
@@ -74,10 +66,7 @@
 
 /* Blog Heading Medium */
 .blog-grid-heading-md {
-  @include heading_text;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 1.4;
+  @include post_heading(30px, 1.4);
 
   @include media-breakpoint-down(lg) {
     font-size: 20px;
@@ -92,14 +81,18 @@
   }
 }
 
-/* Blog Heading Small */
-
 .blog-grid-heading-sm {
-  @include heading_text;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 1.2;
+  @include post_heading(24px, 1.3);
 
+  @include media-breakpoint-down(lg) {
+    font-size: 20px;
+  }
+}
+
+/* Blog Heading Extra Small */
+
+.blog-grid-heading-xs {
+  @include post_heading(22px, 1.2);
   @include media-breakpoint-down(md) {
     font-size: 20px;
   }
@@ -113,9 +106,11 @@
   font-weight: 400;
 }
 
-/////////////
-// HEADER //
-////////////
+/*
+//////////////////////
+// HEADER TYPOGRAPHY//
+//////////////////////
+*/
 
 .header_menu span {
   font-family: "Roboto", sans-serif;
@@ -135,9 +130,12 @@
   }
 }
 
-////////////////
-// OFFCANVAS //
-///////////////
+/*
+//////////////////////////
+// OFFCANVAS TYPOGRAPHY //
+//////////////////////////
+*/
+
 .offcanvas-body {
   .nav-link {
     font-family: "Roboto", sans-serif;
@@ -148,3 +146,37 @@
     text-transform: uppercase;
   }
 }
+
+/*
+//////////////////////////////
+// EDITOR"S PICK TYPOGRAPHY //
+//////////////////////////////
+*/
+
+.block_heading {
+  font-family: "Oswald", sans-serif;
+  color: $primary;
+  font-size: 30px;
+  line-height: 1.5;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+  }
+}
+
+.post_date {
+  font-family: "Roboto", sans-serif;
+  color: $text_light_2;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 2px;
+}
+// font-family: 'Oswald', sans-serif;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Rubik', sans-serif
+// font-family: 'Montserrat', sans-serif;
