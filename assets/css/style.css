@@ -11478,70 +11478,60 @@ a:hover {
 
 .section_heading {
   position: relative;
-  text-align: center;
+  display: inline-block;
 }
 .section_heading::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 160px;
+  left: -230px;
   width: 200px;
   height: 2px;
   background-color: #e6e6e6;
   transform: translateY(-50%);
 }
-@media (max-width: 1199.98px) {
-  .section_heading::before {
-    left: 120px;
-  }
-}
 @media (max-width: 991.98px) {
   .section_heading::before {
     width: 115px;
-    left: 100px;
+    left: -150px;
   }
 }
 @media (max-width: 767.98px) {
   .section_heading::before {
-    left: 35px;
+    left: -150px;
   }
 }
 @media (max-width: 575.98px) {
   .section_heading::before {
     width: 62px;
-    left: 25px;
+    left: -90px;
   }
 }
 .section_heading::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 160px;
+  right: -230px;
   width: 200px;
   height: 2px;
   background-color: #e6e6e6;
   transform: translateY(-50%);
 }
-@media (max-width: 1199.98px) {
-  .section_heading::after {
-    right: 120px;
-  }
-}
 @media (max-width: 991.98px) {
   .section_heading::after {
     width: 115px;
-    right: 100px;
+    right: -150px;
   }
 }
 @media (max-width: 767.98px) {
   .section_heading::after {
-    right: 35px;
+    right: -150px;
   }
 }
 @media (max-width: 575.98px) {
   .section_heading::after {
     width: 62px;
-    right: 25px;
+    right: -90px;
   }
 }
 

@@ -3,57 +3,49 @@
 
 .section_heading {
   position: relative;
-  text-align: center;
+  display: inline-block;
 
   &::before {
-    @include pseudoTopLeft(50%, 160px);
+    @include pseudoTopLeft(50%, -230px);
     width: 200px;
     height: 2px;
     background-color: #e6e6e6;
     transform: translateY(-50%);
 
-    @include media-breakpoint-down(xl) {
-      left: 120px;
-    }
-
     @include media-breakpoint-down(lg) {
       width: 115px;
-      left: 100px;
+      left: -150px;
     }
 
     @include media-breakpoint-down(md) {
-      left: 35px;
+      left: -150px;
     }
 
     @include media-breakpoint-down(sm) {
       width: 62px;
-      left: 25px;
+      left: -90px;
     }
   }
 
   &::after {
-    @include pseudoTopRight(50%, 160px);
+    @include pseudoTopRight(50%, -230px);
     width: 200px;
     height: 2px;
     background-color: #e6e6e6;
     transform: translateY(-50%);
 
-    @include media-breakpoint-down(xl) {
-      right: 120px;
-    }
-
     @include media-breakpoint-down(lg) {
       width: 115px;
-      right: 100px;
+      right: -150px;
     }
 
     @include media-breakpoint-down(md) {
-      right: 35px;
+      right: -150px;
     }
 
     @include media-breakpoint-down(sm) {
       width: 62px;
-      right: 25px;
+      right: -90px;
     }
   }
 }
