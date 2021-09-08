@@ -15,8 +15,10 @@
 @use './global/footer';
 @use './global/section_heading';
 @use './global/post-head-style';
+// @use './global/category_badge';
 
 // HOMEPAGE SECTIONS
 
 @use './pages/home/lifestyle';
 @use './pages/home/editors_pick';
+@use './pages/home/latest_articles';

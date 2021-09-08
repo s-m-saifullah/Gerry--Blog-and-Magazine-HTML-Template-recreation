@@ -1,0 +1,428 @@
+@use '../../custom' as *;
+@use '../../components/color' as *;
+@use '../../components/mixins' as *;
+
+.latest_articles {
+  padding: 50px 0;
+  .section_heading_s2 {
+    margin-bottom: 60px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 50px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .p_head_style {
+    display: inline-block;
+    &::after {
+      width: 35%;
+      height: 20px;
+      bottom: 5px;
+
+      @include media-breakpoint-down(sm) {
+        display: block;
+        height: 12px;
+        width: 63%;
+      }
+    }
+  }
+
+  &__featured {
+    .post {
+      &__title {
+        max-width: 500px;
+        margin: 25px 0;
+
+        @include media-breakpoint-down(lg) {
+          margin: 20px 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 15px;
+        }
+      }
+
+      .cat_badge {
+        @include catBadge($primary, $p_text_dark);
+      }
+
+      &__img {
+        min-height: 400px;
+        @include bg_img(cover, center);
+        position: relative;
+
+        .post_date {
+          @include postDateLeft;
+        }
+
+        .post_excerpt {
+          position: absolute;
+          width: 330px;
+          height: 155px;
+          padding: 5px 0 30px 30px;
+          right: 0;
+          top: 0;
+          background-color: #ffffff;
+
+          @media (max-width: 480px) {
+            position: static;
+            padding: 0;
+            height: auto;
+            width: auto;
+            padding-bottom: 15px;
+          }
+
+          a {
+            display: table;
+            margin-left: auto;
+            margin-top: 30px;
+
+            @media (max-width: 480px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__grid {
+    margin-top: 30px;
+    .post {
+      &__img {
+        @include bg_img(cover, center);
+        position: relative;
+        min-height: 500px;
+        width: 370px;
+
+        @include media-breakpoint-down(xl) {
+          min-height: 385px;
+          width: 280px;
+        }
+
+        @include media-breakpoint-down(lg) {
+          min-height: 385px;
+          width: 315px;
+        }
+
+        @include media-breakpoint-down(md) {
+          min-height: 300px;
+          width: 90%;
+        }
+
+        @include media-breakpoint-down(sm) {
+          min-height: 270px;
+          width: 100%;
+        }
+
+        .post_date {
+          @include postDateRight;
+
+          @include media-breakpoint-only(lg) {
+            right: -85px;
+          }
+
+          @media (max-width: 650px) {
+            display: none;
+          }
+        }
+
+        .cat_badge {
+          @include catBadge($primary, $p_text_dark);
+          position: absolute;
+          left: 10px;
+          bottom: -10px;
+        }
+      }
+
+      &__title {
+        display: inline-block;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        max-width: 95%;
+
+        @include media-breakpoint-down(xl) {
+          max-width: 80%;
+        }
+
+        @include media-breakpoint-down(sm) {
+          margin-top: 20px;
+        }
+
+        .blog-grid-heading-md {
+          @include media-breakpoint-down(xl) {
+            font-size: 26px;
+          }
+
+          @include media-breakpoint-down(lg) {
+            font-size: 22px;
+          }
+
+          @include media-breakpoint-down(md) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .pagination {
+      margin-top: 30px;
+      @include flex-center;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 20px;
+        margin-bottom: 45px;
+      }
+      li {
+        margin: 0 15px;
+
+        a {
+          color: #6b6a6a;
+          font-family: sans-serif;
+        }
+      }
+
+      li.active {
+        a {
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+          border-radius: 50%;
+          color: $p_text_dark;
+          background-color: $primary;
+        }
+      }
+    }
+  }
+  .sidebar {
+    .feat_author {
+      margin-bottom: 20px;
+      .author_img {
+        @include bg_img(cover, center);
+
+        min-height: 425px;
+        position: relative;
+
+        .author_info {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(black, 0.8);
+          padding: 25px;
+
+          .author_name {
+            display: table;
+            margin: 0 auto;
+            margin-bottom: 15px;
+
+            a {
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          .author_social {
+            @include flex-center;
+            padding-left: 0;
+            margin-top: 15px;
+            li {
+              margin: 0 10px;
+              color: white;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .sidebar_heading {
+      text-align: left;
+
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+      }
+      h4 {
+        display: inline-block;
+        margin: 15px 0;
+        position: relative;
+
+        &::after {
+          @include pseudoBottomLeft(0px, 20%);
+          right: 20%;
+          background-color: $primary;
+          height: 2px;
+          display: none;
+
+          @include media-breakpoint-down(lg) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .latest_posts {
+      .latest_post {
+        padding: 20px 0;
+
+        .post_num {
+          text-align: center;
+          width: 30px;
+          height: 30px;
+          background-color: $primary;
+          border-radius: 50%;
+          font-size: 15px;
+          line-height: 2;
+        }
+
+        .cat_badge {
+          @include catBadge(transparent, $text_light_2);
+          padding-left: 0;
+          transition: 0.3s;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+
+        .post_title {
+          margin-top: 5px;
+          margin-bottom: 10px;
+        }
+
+        .post_date {
+          font-size: 11;
+          color: $text_light_2;
+          letter-spacing: 0;
+        }
+      }
+
+      .latest_post_1 {
+        padding-top: 0;
+      }
+
+      .latest_post_1,
+      .latest_post_2 {
+        border-bottom: 1px solid rgba($text_light, 0.7);
+      }
+    }
+
+    .the_latest {
+      margin-top: 30px;
+
+      .swiper {
+        margin-top: 30px;
+
+        .swiper-slide {
+          .post_img {
+            min-height: 300px;
+            @include bg_img(cover, center);
+          }
+
+          .post_info {
+            margin-top: 20px;
+
+            .cat_badge {
+              @include catBadge(transparent, $text_light_2);
+              padding-left: 0;
+              transition: 0.3s;
+
+              &:hover {
+                color: $primary;
+              }
+            }
+
+            .post_title {
+              margin: 10px 0 15px;
+            }
+
+            .post_excerpt {
+              font-size: 15px;
+              font-family: sans-serif;
+            }
+          }
+        }
+
+        .swiper-nav {
+          background-color: #fff;
+          position: absolute;
+          right: 0;
+          top: 56.1%;
+          z-index: 1;
+          padding: 5px;
+
+          @include media-breakpoint-down(md) {
+            top: 63.2%;
+          }
+
+          .swiper-prev,
+          .swiper-next {
+            display: inline-block;
+            padding: 0 10px;
+            transition: 0.3s;
+            font-size: 14px;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    .home_categories {
+      margin-top: 30px;
+
+      .categories {
+        margin-top: 15px;
+        .category {
+          position: relative;
+          margin-bottom: 20px;
+          .cat_img {
+            min-height: 120px;
+            @include bg_img(cover, center);
+            position: relative;
+            isolation: isolate;
+
+            &__overlay {
+              position: absolute;
+              inset: 0;
+              background-color: rgba(black, 0.8);
+              z-index: -1;
+              opacity: 0;
+              transition: 0.5s;
+
+              a {
+                color: white;
+                text-align: center;
+                display: block;
+                line-height: 120px;
+                font-family: "Roboto", sans-serif;
+                font-size: 14px;
+              }
+            }
+
+            &:hover {
+              .cat_img__overlay {
+                opacity: 1;
+              }
+            }
+          }
+          .cat_badge {
+            @include catBadge($primary, $p_text_dark);
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}

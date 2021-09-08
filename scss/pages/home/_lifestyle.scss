@@ -158,7 +158,9 @@
     .post__title {
       a {
         cursor: text;
+      }
 
+      .p_head_style {
         &::after {
           height: 10px;
         }

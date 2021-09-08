@@ -75,11 +75,7 @@
         }
 
         .post_date {
-          position: absolute;
-          top: 50%;
-          left: -100px;
-          transform: rotate(-90deg) translateX(50%);
-          opacity: 0.4;
+          @include postDateLeft;
         }
       }
     }

@@ -24,4 +24,20 @@ $(function(){
     $('.search-close').on('click', function(){
         $('.header_search--overlay form').css('animation', 'toCenter .5s forwards')
     })
+
+    // Sidebar slider
+
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        spaceBetween: 30,
+        effect: "fade",
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-next',
+            prevEl: '.swiper-prev',
+        },
+
+      });
+      
 })

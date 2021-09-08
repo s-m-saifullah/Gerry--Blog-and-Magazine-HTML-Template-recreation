@@ -12,9 +12,17 @@
   font-weight: 500;
   font-size: $font-size;
   line-height: $line-height;
+  text-transform: uppercase;
+}
+
+@mixin bg_img($bg_size, $bg_pos) {
+  background-size: $bg_size;
+  background-position: $bg_pos;
+  background-repeat: no-repeat;
 }
 
 @mixin flex-v_center {
+  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -29,6 +37,22 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin postDateLeft {
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  transform: rotate(-90deg);
+  opacity: 0.4;
+}
+
+@mixin postDateRight {
+  position: absolute;
+  top: 50%;
+  right: -95px;
+  transform: rotate(-90deg);
+  opacity: 0.4;
 }
 
 @mixin pseudoTopRight($top, $right) {
@@ -57,4 +81,11 @@
   position: absolute;
   bottom: $bottom;
   left: $left;
+}
+
+@mixin catBadge($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+  padding: 5px 10px;
+  display: inline-block;
 }

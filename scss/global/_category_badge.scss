@@ -1,0 +1,7 @@
+@use '../custom' as *;
+
+.cat_badge {
+  background-color: $primary;
+  padding: 5px 10px;
+  display: inline-block;
+}
