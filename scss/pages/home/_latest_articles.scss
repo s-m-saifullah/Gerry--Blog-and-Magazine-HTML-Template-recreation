@@ -3,6 +3,7 @@
 @use '../../components/mixins' as *;
 
 .latest_articles {
+  position: relative;
   padding: 50px 0;
   .section_heading_s2 {
     margin-bottom: 60px;
@@ -370,6 +371,10 @@
             top: 56.8%;
           }
 
+          @media (min-width: 526px) and (max-width: 575.9px) {
+            top: 63.3%;
+          }
+
           .swiper-prev,
           .swiper-next {
             display: inline-block;
@@ -431,6 +436,55 @@
           }
         }
       }
+    }
+  }
+  .sticky_sidebar {
+    position: fixed;
+    top: -1420px;
+    left: 972px;
+    width: 262px;
+
+    @include media-breakpoint-up(xxl) {
+      width: 307px;
+      left: 1042px;
+      top: -1320px;
+    }
+
+    @include media-breakpoint-down(xxl) {
+      left: 997px;
+      top: -1340px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      top: -1315px;
+      left: 668px;
+      width: 297px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      position: static;
+      width: initial;
+    }
+  }
+
+  .sticky_sidebar_fix {
+    position: absolute;
+    top: unset;
+    bottom: 120px;
+    width: 262px;
+
+    @include media-breakpoint-up(xxl) {
+      width: 307px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      width: 297px;
+      bottom: 130px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      position: static;
+      width: initial;
     }
   }
 }

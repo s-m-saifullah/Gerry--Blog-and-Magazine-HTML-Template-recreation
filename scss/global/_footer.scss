@@ -1,0 +1,13 @@
+@use '../custom' as *;
+@use '../components/color' as *;
+@use '../components/mixins' as *;
+
+.footer {
+  background-color: $bg_dark;
+  padding: 40px 0;
+
+  .footer_nav {
+    @include flex-v_center;
+    padding-left: 0;
+  }
+}
