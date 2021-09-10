@@ -2,19 +2,22 @@ $(function(){
 
     $(window).on ('scroll', function(){
         
+        var distLeft = $('.sidebar').offset().left;
+        console.log(distLeft);
+
         // SIDEBAR STICKY ON SCROLL DOWN
         var scrollTop = $(window).scrollTop();
         
         if (scrollTop > 3417 && scrollTop < 4020) {
             $('.sidebar').addClass('sticky_sidebar');
+            $('.sticky_sidebar').css('left', distLeft);
         } else {
             $('.sidebar').removeClass('sticky_sidebar');
         }
 
-        console.log(scrollTop);
-
         if (scrollTop > 4020){
              $('.sidebar').addClass('sticky_sidebar_fix');
+             $('.sticky_sidebar').css('left', distLeft);
         } else {
             $('.sidebar').removeClass('sticky_sidebar_fix');
         }
@@ -23,27 +26,14 @@ $(function(){
 
             if (scrollTop > 3300 && scrollTop < 3630) {
                 $('.sidebar').addClass('sticky_sidebar');
+                $('.sticky_sidebar').css('left', distLeft);
             } else {
                 $('.sidebar').removeClass('sticky_sidebar');
             }
 
             if (scrollTop > 3630){
                 $('.sidebar').addClass('sticky_sidebar_fix');
-           } else {
-               $('.sidebar').removeClass('sticky_sidebar_fix');
-           }
-        }
-
-        if (window.innerWidth >= 1200 && window.innerWidth <=1399) {
-
-            if (scrollTop > 3310 && scrollTop < 3915) {
-                $('.sidebar').addClass('sticky_sidebar');
-            } else {
-                $('.sidebar').removeClass('sticky_sidebar');
-            }
-
-            if (scrollTop > 3915){
-                $('.sidebar').addClass('sticky_sidebar_fix');
+                $('.sticky_sidebar').css('left', distLeft);
            } else {
                $('.sidebar').removeClass('sticky_sidebar_fix');
            }
@@ -53,12 +43,14 @@ $(function(){
 
             if (scrollTop > 3332 && scrollTop < 3915) {
                 $('.sidebar').addClass('sticky_sidebar');
+                $('.sticky_sidebar').css('left', distLeft);
             } else {
                 $('.sidebar').removeClass('sticky_sidebar');
             }
 
             if (scrollTop > 3915){
                 $('.sidebar').addClass('sticky_sidebar_fix');
+                $('.sticky_sidebar').css('left', distLeft);
            } else {
                $('.sidebar').removeClass('sticky_sidebar_fix');
            }

@@ -11444,11 +11444,13 @@ p {
 .footer_right a {
   font-family: "Rubik", sans-serif;
   font-family: 16px;
+  opacity: 0.6;
 }
 
 #header {
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   height: 115px;
   padding-top: 20px;
@@ -11475,12 +11477,14 @@ p {
 #header .header_right {
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
 }
 #header .header_right .header_social {
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   border-right: 1px solid #e6e6e6;
   margin-right: 25px;
@@ -11568,6 +11572,7 @@ p {
 .offcanvas-header .offcanvas_social {
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding-left: 0;
   margin-top: 15px;
@@ -11642,10 +11647,43 @@ p {
   padding: 40px 0;
 }
 .footer .footer_nav {
-  height: 100%;
-  display: flex;
-  align-items: center;
   padding-left: 0;
+}
+@media (max-width: 991.98px) {
+  .footer .footer_nav {
+    text-align: center;
+  }
+}
+@media (max-width: 991.98px) {
+  .footer .footer_left {
+    margin-bottom: 15px;
+  }
+}
+.footer .footer_left .secondary_nav li {
+  margin-right: 20px;
+  display: inline-block;
+}
+@media (max-width: 991.98px) {
+  .footer .footer_left .secondary_nav li {
+    margin: 0 15px;
+  }
+}
+.footer .footer_right .footer_social {
+  justify-content: flex-end;
+}
+@media (min-width: 992px) {
+  .footer .footer_right .footer_social {
+    text-align: right;
+  }
+}
+.footer .footer_right .footer_social li {
+  padding: 0 20px;
+  display: inline-block;
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+.footer .footer_right .footer_social li:last-of-type {
+  padding-right: 0;
+  border-right: none;
 }
 
 .section_heading {
@@ -12349,6 +12387,7 @@ p {
 .latest_articles__grid .pagination {
   margin-top: 30px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -12408,6 +12447,7 @@ p {
 }
 .latest_articles .sidebar .feat_author .author_img .author_info .author_social {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding-left: 0;
@@ -12601,26 +12641,17 @@ p {
 .latest_articles .sticky_sidebar {
   position: fixed;
   top: -1420px;
-  left: 972px;
   width: 262px;
 }
 @media (min-width: 1400px) {
   .latest_articles .sticky_sidebar {
     width: 307px;
-    left: 1042px;
     top: -1320px;
-  }
-}
-@media (max-width: 1399.98px) {
-  .latest_articles .sticky_sidebar {
-    left: 997px;
-    top: -1340px;
   }
 }
 @media (max-width: 1199.98px) {
   .latest_articles .sticky_sidebar {
     top: -1315px;
-    left: 668px;
     width: 297px;
   }
 }

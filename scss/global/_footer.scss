@@ -7,7 +7,47 @@
   padding: 40px 0;
 
   .footer_nav {
-    @include flex-v_center;
     padding-left: 0;
+
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+  }
+
+  .footer_left {
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 15px;
+    }
+    .secondary_nav {
+      li {
+        margin-right: 20px;
+        display: inline-block;
+
+        @include media-breakpoint-down(lg) {
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+
+  .footer_right {
+    .footer_social {
+      justify-content: flex-end;
+
+      @include media-breakpoint-up(lg) {
+        text-align: right;
+      }
+
+      li {
+        padding: 0 20px;
+        display: inline-block;
+        border-right: 1px solid rgba(white, 0.6);
+
+        &:last-of-type {
+          padding-right: 0;
+          border-right: none;
+        }
+      }
+    }
   }
 }

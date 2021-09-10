@@ -24,11 +24,13 @@
 @mixin flex-v_center {
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 @mixin flex-center {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }

@@ -441,23 +441,15 @@
   .sticky_sidebar {
     position: fixed;
     top: -1420px;
-    left: 972px;
     width: 262px;
 
     @include media-breakpoint-up(xxl) {
       width: 307px;
-      left: 1042px;
       top: -1320px;
-    }
-
-    @include media-breakpoint-down(xxl) {
-      left: 997px;
-      top: -1340px;
     }
 
     @include media-breakpoint-down(xl) {
       top: -1315px;
-      left: 668px;
       width: 297px;
     }
 
