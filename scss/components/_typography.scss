@@ -153,6 +153,24 @@
     text-align: center;
   }
 }
+/*
+/////////////////
+// SCROLL MENU //
+/////////////////
+*/
+
+.scroll_menu {
+  .nav-link {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    color: rgba(black, 0.8) !important;
+  }
+
+  .dropdown-item {
+    color: rgba(black, 0.6);
+  }
+}
 
 /*
 //////////////////////////
@@ -244,9 +262,9 @@
 }
 
 /*
-//////////////////////
+////////////
 // FOOTER //
-//////////////////////
+////////////
 */
 
 .footer_left {

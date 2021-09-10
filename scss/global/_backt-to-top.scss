@@ -1,0 +1,26 @@
+@use '../custom' as *;
+
+.b2t_btn {
+  width: 40px;
+  height: 40px;
+  background-color: #f8f8f8;
+  text-align: center;
+  box-shadow: 0px 6px 15px -4px rgba(0, 0, 0, 0.8);
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  display: none;
+  cursor: pointer;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  i {
+    font-size: 22px;
+    color: #333333;
+    line-height: 40px;
+  }
+}

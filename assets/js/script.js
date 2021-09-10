@@ -1,13 +1,25 @@
 $(function(){
 
+    // Document Height
+    var height = document.body.scrollHeight;
+
     $(window).on ('scroll', function(){
         
         var distLeft = $('.sidebar').offset().left;
-        console.log(distLeft);
 
         // SIDEBAR STICKY ON SCROLL DOWN
         var scrollTop = $(window).scrollTop();
-        
+
+        // SCROLL NAV APPEARANCE
+        if (window.innerWidth >= 992) {
+            if (scrollTop > 200) {
+                $('.scroll_menu').css('top','0')
+            } else {
+                $('.scroll_menu').css('top','-120px')
+            }
+        }
+       
+
         if (scrollTop > 3417 && scrollTop < 4020) {
             $('.sidebar').addClass('sticky_sidebar');
             $('.sticky_sidebar').css('left', distLeft);
@@ -56,6 +68,17 @@ $(function(){
            }
         }
 
+        // BACT TO TOP BUTTON APPEARANCE
+
+        if (window.innerWidth >= 768) {
+
+            if (scrollTop >= .2 * height) {
+                $('.b2t_btn').show(300);
+            } else {
+                $('.b2t_btn').hide(300);
+            }
+        }
+
     })
 
 
@@ -100,5 +123,13 @@ $(function(){
         },
 
       });
+
+    //   BACT TO TOP
+
+    $('.b2t_btn').on('click', function(){
+        $('html, body').animate({scrollTop: 0}, 1000)
+    })
+
+    
       
 })

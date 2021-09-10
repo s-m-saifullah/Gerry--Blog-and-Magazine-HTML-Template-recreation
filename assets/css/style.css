@@ -11341,6 +11341,21 @@ p {
 }
 
 /*
+/////////////////
+// SCROLL MENU //
+/////////////////
+*/
+.scroll_menu .nav-link {
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+.scroll_menu .dropdown-item {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*
 //////////////////////////
 // OFFCANVAS TYPOGRAPHY //
 //////////////////////////
@@ -11431,9 +11446,9 @@ p {
 }
 
 /*
-//////////////////////
+////////////
 // FOOTER //
-//////////////////////
+////////////
 */
 .footer_left a {
   font-family: sans-serif;
@@ -11551,6 +11566,47 @@ p {
   opacity: 1;
   color: #e6e6e6;
   transform: translateY(15px);
+}
+
+.scroll_menu {
+  position: fixed;
+  top: -120px;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.75);
+  transition: 0.3s;
+}
+.scroll_menu .navbar .navbar-brand img {
+  width: 93px;
+}
+.scroll_menu .navbar-nav {
+  margin-left: 30px;
+}
+.scroll_menu .navbar-nav .nav-item {
+  position: relative;
+}
+.scroll_menu .navbar-nav .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  width: 0px;
+  height: 3px;
+  background-color: #ffcc0d;
+  transition: 0.3s;
+}
+.scroll_menu .navbar-nav .nav-item:hover::after {
+  width: 20px;
+}
+.scroll_menu .navbar-nav .nav-item .dropdown-menu {
+  margin-top: 8px;
+  background-color: #fafafa;
+  min-width: 192px;
+  border-radius: 0;
+}
+.scroll_menu .navbar-nav .nav-item:hover .dropdown-menu {
+  display: block;
 }
 
 .offcanvas {
@@ -11773,6 +11829,31 @@ p {
   .p_head_style::after {
     height: 35%;
   }
+}
+
+.b2t_btn {
+  width: 40px;
+  height: 40px;
+  background-color: #f8f8f8;
+  text-align: center;
+  box-shadow: 0px 6px 15px -4px rgba(0, 0, 0, 0.8);
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 767.98px) {
+  .b2t_btn {
+    display: none;
+  }
+}
+.b2t_btn i {
+  font-size: 22px;
+  color: #333333;
+  line-height: 40px;
 }
 
 .lifestyle {

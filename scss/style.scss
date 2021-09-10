@@ -11,10 +11,12 @@
 // GLOBAL SECTIONS
 
 @use './global/header';
+@use './global/scroll_menu';
 @use './global/offcanvas';
 @use './global/footer';
 @use './global/section_heading';
 @use './global/post-head-style';
+@use './global/backt-to-top';
 // @use './global/category_badge';
 
 // HOMEPAGE SECTIONS
