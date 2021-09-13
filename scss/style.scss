@@ -13,6 +13,7 @@
 @use './global/header';
 @use './global/scroll_menu';
 @use './global/offcanvas';
+@use './global/sidebar';
 @use './global/footer';
 @use './global/section_heading';
 @use './global/post-head-style';
@@ -28,3 +29,7 @@
 // CONTACT PAGE
 
 @use './pages/contact/contact';
+
+// Single PAGE
+
+@use './pages/single_post/single_post';

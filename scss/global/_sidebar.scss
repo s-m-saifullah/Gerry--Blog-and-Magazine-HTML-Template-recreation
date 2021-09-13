@@ -1,0 +1,228 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+@use '../components/color' as *;
+
+.sidebar {
+  position: sticky;
+  top: 65px;
+  .feat_author {
+    margin-bottom: 20px;
+    .author_img {
+      @include bg_img(cover, center);
+
+      min-height: 425px;
+      position: relative;
+
+      .author_info {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(black, 0.8);
+        padding: 25px;
+
+        .author_name {
+          display: table;
+          margin: 0 auto;
+          margin-bottom: 15px;
+
+          a {
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .author_social {
+          @include flex-center;
+          padding-left: 0;
+          margin-top: 15px;
+          li {
+            margin: 0 10px;
+            color: white;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar_heading {
+    text-align: left;
+
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+    h4 {
+      display: inline-block;
+      margin: 15px 0;
+      position: relative;
+
+      &::after {
+        @include pseudoBottomLeft(0px, 20%);
+        right: 20%;
+        background-color: $primary;
+        height: 2px;
+        display: none;
+
+        @include media-breakpoint-down(lg) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .latest_posts {
+    .latest_post {
+      padding: 20px 0;
+
+      .post_num {
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        background-color: $primary;
+        border-radius: 50%;
+        font-size: 15px;
+        line-height: 2;
+      }
+
+      .cat_badge {
+        @include catBadge(transparent, $text_light_2);
+        padding-left: 0;
+        transition: 0.3s;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      .post_title {
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+
+      .post_date {
+        font-size: 11;
+        color: $text_light_2;
+        letter-spacing: 0;
+      }
+    }
+
+    .latest_post_1 {
+      padding-top: 0;
+    }
+
+    .latest_post_1,
+    .latest_post_2 {
+      border-bottom: 1px solid rgba($text_light, 0.7);
+    }
+  }
+
+  .the_latest {
+    margin-top: 30px;
+
+    .swiper {
+      margin-top: 30px;
+
+      .swiper-slide {
+        .post_img {
+          min-height: 300px;
+          @include bg_img(cover, center);
+          position: relative;
+
+          .swiper-nav {
+            background-color: #fff;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            padding: 5px;
+
+            .swiper-prev,
+            .swiper-next {
+              display: inline-block;
+              padding: 0 10px;
+              transition: 0.3s;
+              font-size: 14px;
+
+              &:hover {
+                color: $primary;
+              }
+            }
+          }
+        }
+
+        .post_info {
+          margin-top: 20px;
+
+          .cat_badge {
+            @include catBadge(transparent, $text_light_2);
+            padding-left: 0;
+            transition: 0.3s;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+
+          .post_title {
+            margin: 10px 0 15px;
+          }
+
+          .post_excerpt {
+            font-size: 15px;
+            font-family: sans-serif;
+          }
+        }
+      }
+    }
+  }
+
+  .home_categories {
+    margin-top: 30px;
+
+    .categories {
+      margin-top: 15px;
+      .category {
+        position: relative;
+        margin-bottom: 20px;
+        .cat_img {
+          min-height: 120px;
+          @include bg_img(cover, center);
+          position: relative;
+          isolation: isolate;
+
+          &__overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(black, 0.8);
+            z-index: -1;
+            opacity: 0;
+            transition: 0.5s;
+
+            a {
+              color: white;
+              text-align: center;
+              display: block;
+              line-height: 120px;
+              font-family: "Roboto", sans-serif;
+              font-size: 14px;
+            }
+          }
+
+          &:hover {
+            .cat_img__overlay {
+              opacity: 1;
+            }
+          }
+        }
+        .cat_badge {
+          @include catBadge($primary, $p_text_dark);
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+}

@@ -21,7 +21,6 @@
     .offcanvas_social {
       @include flex-v_center;
       padding-left: 0;
-      margin-top: 15px;
 
       li {
         margin-right: 15px;
@@ -58,7 +57,7 @@
   hr {
     color: #e6e6e6;
     opacity: 1;
-    margin-top: -6px;
+    margin-top: 9px;
   }
 
   &-body {
