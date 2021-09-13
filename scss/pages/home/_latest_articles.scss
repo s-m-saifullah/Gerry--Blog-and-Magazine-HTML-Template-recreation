@@ -206,6 +206,8 @@
     }
   }
   .sidebar {
+    position: sticky;
+    top: 65px;
     .feat_author {
       margin-bottom: 20px;
       .author_img {
@@ -436,43 +438,6 @@
           }
         }
       }
-    }
-  }
-  .sticky_sidebar {
-    position: fixed;
-    bottom: 0;
-    width: 262px;
-
-    @include media-breakpoint-up(xxl) {
-      width: 307px;
-    }
-
-    @include media-breakpoint-down(xl) {
-      width: 297px;
-    }
-
-    @include media-breakpoint-down(lg) {
-      position: static;
-      width: initial;
-    }
-  }
-
-  .sticky_sidebar_fix {
-    position: absolute;
-    bottom: 0;
-    width: 262px;
-
-    @include media-breakpoint-up(xxl) {
-      width: 307px;
-    }
-
-    @include media-breakpoint-down(xl) {
-      width: 297px;
-    }
-
-    @include media-breakpoint-down(lg) {
-      position: static;
-      width: initial;
     }
   }
 }
