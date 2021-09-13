@@ -1,14 +1,41 @@
 $(function(){
 
     // Document Height
-    var height = document.body.scrollHeight;
+    var docHeight = document.body.scrollHeight;
+    // Sidebar Height
+    var sidebarHeight = document.querySelector('.sidebar').clientHeight;
+
+    var distTopSidebar = $('.sidebar').offset().top;
+
+    totalSidebarHeight = sidebarHeight + distTopSidebar - window.innerHeight;
+    
+    // Sidebar Wrapper Height
+
+    var hasSidebar = document.querySelector('.hasSidebar');
+
+    var sidebarWrapperHeight = hasSidebar.clientHeight;
+
+    var hasSidebarStyles = getComputedStyle(hasSidebar);
+
+    var hasSidebarPaddingTop = parseInt(hasSidebarStyles.paddingTop.replace('px', ''));
+
+    var hasSidebarPaddingBottom = parseInt(hasSidebarStyles.paddingBottom.replace('px', ''));
+
+    var distTopSidebarWrapper = $('.hasSidebar').offset().top;
+
+    var totalSidebarWrapperHeight = sidebarWrapperHeight + distTopSidebarWrapper - window.innerHeight;
+
+    console.log (sidebarHeight);
 
     $(window).on ('scroll', function(){
         
         var distLeft = $('.sidebar').offset().left;
+        
 
         // SIDEBAR STICKY ON SCROLL DOWN
         var scrollTop = $(window).scrollTop();
+
+        // console.log(scrollTop, totalSidebarHeight, totalSidebarWrapperHeight);
 
         // SCROLL NAV APPEARANCE
         if (window.innerWidth >= 992) {
@@ -20,59 +47,59 @@ $(function(){
         }
        
 
-        if (scrollTop > 3417 && scrollTop < 4020) {
+        if (scrollTop > totalSidebarHeight && scrollTop <= totalSidebarWrapperHeight) {
             $('.sidebar').addClass('sticky_sidebar');
             $('.sticky_sidebar').css('left', distLeft);
         } else {
             $('.sidebar').removeClass('sticky_sidebar');
         }
 
-        if (scrollTop > 4020){
+        if (scrollTop > totalSidebarWrapperHeight){
              $('.sidebar').addClass('sticky_sidebar_fix');
              $('.sticky_sidebar').css('left', distLeft);
         } else {
             $('.sidebar').removeClass('sticky_sidebar_fix');
         }
 
-        if (window.innerWidth <= 1199) {
+        // if (window.innerWidth <= 1199) {
 
-            if (scrollTop > 3300 && scrollTop < 3630) {
-                $('.sidebar').addClass('sticky_sidebar');
-                $('.sticky_sidebar').css('left', distLeft);
-            } else {
-                $('.sidebar').removeClass('sticky_sidebar');
-            }
+        //     if (scrollTop > 3470 && scrollTop <= 3800) {
+        //         $('.sidebar').addClass('sticky_sidebar');
+        //         $('.sticky_sidebar').css('left', distLeft);
+        //     } else {
+        //         $('.sidebar').removeClass('sticky_sidebar');
+        //     }
 
-            if (scrollTop > 3630){
-                $('.sidebar').addClass('sticky_sidebar_fix');
-                $('.sticky_sidebar').css('left', distLeft);
-           } else {
-               $('.sidebar').removeClass('sticky_sidebar_fix');
-           }
-        }
+        //     if (scrollTop > 3800){
+        //         $('.sidebar').addClass('sticky_sidebar_fix');
+        //         $('.sticky_sidebar').css('left', distLeft);
+        //    } else {
+        //        $('.sidebar').removeClass('sticky_sidebar_fix');
+        //    }
+        // }
 
-        if (window.innerWidth >= 1400) {
+        // if (window.innerWidth >= 1400) {
 
-            if (scrollTop > 3332 && scrollTop < 3915) {
-                $('.sidebar').addClass('sticky_sidebar');
-                $('.sticky_sidebar').css('left', distLeft);
-            } else {
-                $('.sidebar').removeClass('sticky_sidebar');
-            }
+        //     if (scrollTop > 3332 && scrollTop <= 3915) {
+        //         $('.sidebar').addClass('sticky_sidebar');
+        //         $('.sticky_sidebar').css('left', distLeft);
+        //     } else {
+        //         $('.sidebar').removeClass('sticky_sidebar');
+        //     }
 
-            if (scrollTop > 3915){
-                $('.sidebar').addClass('sticky_sidebar_fix');
-                $('.sticky_sidebar').css('left', distLeft);
-           } else {
-               $('.sidebar').removeClass('sticky_sidebar_fix');
-           }
-        }
+        //     if (scrollTop > 3915){
+        //         $('.sidebar').addClass('sticky_sidebar_fix');
+        //         $('.sticky_sidebar').css('left', distLeft);
+        //    } else {
+        //        $('.sidebar').removeClass('sticky_sidebar_fix');
+        //    }
+        // }
 
         // BACT TO TOP BUTTON APPEARANCE
 
         if (window.innerWidth >= 768) {
 
-            if (scrollTop >= .2 * height) {
+            if (scrollTop >= .2 * docHeight) {
                 $('.b2t_btn').show(300);
             } else {
                 $('.b2t_btn').hide(300);

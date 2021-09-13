@@ -172,12 +172,6 @@
   }
 }
 
-/*
-//////////////////////////
-// OFFCANVAS TYPOGRAPHY //
-//////////////////////////
-*/
-
 .offcanvas-body {
   .nav-link {
     font-family: "Roboto", sans-serif;
@@ -282,7 +276,23 @@
     opacity: 0.6;
   }
 }
+
+/*
+//////////////////////////
+////// CONTACT PAGE //////
+//////////////////////////
+*/
+
+.contact_form {
+  button {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    color: $p_text_dark;
+    text-transform: uppercase;
+  }
+}
+
 // font-family: 'Oswald', sans-serif;
 // font-family: 'Roboto', sans-serif;
-// font-family: 'Rubik', sans-serif
+// font-family: 'Rubik', sans-serif;
 // font-family: 'Montserrat', sans-serif;

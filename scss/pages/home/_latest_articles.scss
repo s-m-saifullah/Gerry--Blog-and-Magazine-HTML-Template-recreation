@@ -440,16 +440,14 @@
   }
   .sticky_sidebar {
     position: fixed;
-    top: -1420px;
+    bottom: 0;
     width: 262px;
 
     @include media-breakpoint-up(xxl) {
       width: 307px;
-      top: -1320px;
     }
 
     @include media-breakpoint-down(xl) {
-      top: -1315px;
       width: 297px;
     }
 
@@ -461,8 +459,7 @@
 
   .sticky_sidebar_fix {
     position: absolute;
-    top: unset;
-    bottom: 120px;
+    bottom: 0;
     width: 262px;
 
     @include media-breakpoint-up(xxl) {
@@ -471,7 +468,6 @@
 
     @include media-breakpoint-down(xl) {
       width: 297px;
-      bottom: 130px;
     }
 
     @include media-breakpoint-down(lg) {

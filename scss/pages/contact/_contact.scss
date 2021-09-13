@@ -1,0 +1,56 @@
+@use '../../custom' as *;
+
+.contact_us {
+  padding: 100px 0;
+
+  .map {
+    iframe {
+      max-width: 100%;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .contact_form {
+    .p_head_style {
+      &::after {
+        width: 65%;
+      }
+    }
+    form {
+      margin-top: 50px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 30px;
+      }
+
+      label {
+        margin-bottom: 15px;
+      }
+
+      input,
+      textarea {
+        padding: 10px 15px;
+        margin-bottom: 20px;
+
+        &:focus {
+          box-shadow: none;
+          border-color: rgba(black, 0.1);
+        }
+      }
+
+      textarea {
+        height: 160px;
+      }
+
+      button {
+        margin-top: 15px;
+        padding: 12px 25px;
+        background-color: $primary;
+        border: none;
+      }
+    }
+  }
+}
