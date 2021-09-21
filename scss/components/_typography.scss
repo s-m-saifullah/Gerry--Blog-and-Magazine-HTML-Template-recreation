@@ -256,6 +256,140 @@
 }
 
 /*
+//////////////////////////////
+// SINGLE POST TYPOGRAPHY //
+//////////////////////////////
+*/
+
+.single_post_date {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: $p_text_dark;
+}
+
+.single_post__author {
+  .author__name {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: $p_text_dark;
+    opacity: 0.6;
+  }
+}
+
+.post_para {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: $p_text_dark;
+  opacity: 0.85;
+}
+
+.post_subheading {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 27px;
+  color: rgba(black, 0.7);
+}
+
+.quote_author {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+}
+
+.social_share {
+  a {
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(black, 0.8);
+  }
+}
+
+.single_author_name {
+  @include heading_text;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.single_author_desc {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: $author_box;
+}
+
+/*
+//////////////////////
+// COMMENTS SECTION //
+//////////////////////
+*/
+.comment_section__heading {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.2;
+  color: $p_text_dark;
+}
+
+.commenter_name {
+  h4 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: $text_dark;
+  }
+}
+
+.commenter_name {
+  span {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: $hover_text_dark;
+  }
+}
+
+.comment_content {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $text_dark;
+}
+
+.comment_reply {
+  span {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: $text_dark;
+    text-transform: uppercase;
+  }
+}
+
+.reply_section {
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: $p_text_dark;
+  }
+
+  .form-inst {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: $text_dark;
+  }
+
+  label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: $text_dark;
+  }
+}
+/*
 ////////////
 // FOOTER //
 ////////////

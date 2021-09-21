@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gerry - Blog and Magazine HTML Template Recreation</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Roboto:wght@400;500&family=Rubik&family=Montserrat&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Roboto:wght@400;500,600&family=Rubik&family=Montserrat&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/vendors/fontawesome.css" />
@@ -277,12 +277,12 @@
           <!-- LATEST -->
           <div class="col-lg-8 col-xl-9">
             <article class="single_post">
-              <div class="single_post__img">
+              <div class="single_post__feat-img">
                 <img src="assets/images/x2.webp" alt="" class="img-fluid" />
               </div>
               <div class="single_post__meta">
                 <a href="category.html" class="cat_badge">inspiration</a>
-                <div class="post_date">13 September, 2021</div>
+                <div class="single_post_date">13 September, 2021</div>
               </div>
               <div class="single_post__title">
                 <h1 class="blog-grid-heading-lg">
@@ -291,18 +291,18 @@
               </div>
               <a href="author.html" class="single_post__author">
                 <img src="assets/images/x10.webp" alt="" />
-                <span class="author__name">by Mary Janes</span>
+                <span class="author__name">By Mary Janes</span>
               </a>
               <div class="single_post__content">
                 <div class="post_section">
-                  <p>
+                  <p class="post_para">
                     Met to launch on the manufacturer’s new A330neo aircraft in
                     2017, it’s offering lots of extra space, including wider
                     seats as standard, no control boxes under seats for the
                     in-flight entertainment system, which means it’s all open
                     for you to stretch your legs.
                   </p>
-                  <p>
+                  <p class="post_para">
                     The planes will offer improved built-in broadband
                     connectivity that’ll allow passengers to use their phones
                     and tablets as normal, even making calls and sending and
@@ -311,13 +311,13 @@
                 </div>
                 <div class="post_section">
                   <h3 class="post_subheading">The overall design</h3>
-                  <p>
+                  <p class="post_para">
                     The layout and design of the cabin has been made more
                     modular so each airline can customize the layout of their
                     planes, which should mean wider aisles that aren’t taken
                     over by lavatories and trollies.
                   </p>
-                  <p>
+                  <p class="post_para">
                     The overall design offers more space for you and your
                     luggage, more room to walk around and actually enjoy the
                     surroundings on your journey and not be completely
@@ -327,7 +327,7 @@
                 </div>
                 <div class="post_section">
                   <h3 class="post_subheading">Features</h3>
-                  <p>
+                  <p class="post_para">
                     Being able to stay connected with the ground below via Wi-Fi
                     and now making calls and texts from 35,000 ft makes flying a
                     less daunting experience for anyone who’s nervous. If it
@@ -335,22 +335,22 @@
                     call your friend for a distraction or get lost on Twitter
                     for a while.
                   </p>
-                  <blockquote>
-                    <p>
+                  <blockquote class="post_quote">
+                    <p class="post_para">
                       I am enough of an artist to draw freely upon my
                       imagination. Imagination is more important than knowledge.
                       Knowledge is limited. Imagination encircles the world.
                     </p>
-                    <div class="quote_author">Albert Einstein</div>
+                    <cite class="quote_author">Albert Einstein</cite>
                   </blockquote>
-                  <p>
+                  <p class="post_para">
                     The overall design offers more space for you and your
                     luggage, more room to walk around and actually enjoy the
                     surroundings on your journey and not be completely
                     disorientated when you land, thanks to better environmental
                     controls and changeable mood lighting.
                   </p>
-                  <p>
+                  <p class="post_para">
                     Being able to stay connected with the ground below via Wi-Fi
                     and now making calls and texts from 35,000 ft makes flying a
                     less daunting experience for anyone who’s nervous. If it
@@ -360,7 +360,7 @@
                   </p>
                 </div>
               </div>
-              <ul class="social_">
+              <ul class="social_share">
                 <li><a href="#">Facebook</a></li>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">Instagram</a></li>
@@ -369,13 +369,19 @@
               <div class="post_nav d-flex justify-content-between">
                 <a href="#" class="prev_post">
                   <i class="fas fa-angle-left"></i><span>Previous</span>
+                  <h4 class="blog-grid-heading-xs">
+                    THESE ARE THE DAYS THAT MUST HAPPEN TO YOU
+                  </h4>
                 </a>
                 <a href="#" class="next_post">
                   <span>Next</span><i class="fas fa-angle-right"></i>
+                  <h4 class="blog-grid-heading-xs">
+                    THESE ARE THE DAYS THAT MUST HAPPEN TO YOU
+                  </h4>
                 </a>
               </div>
-              <div class="author_box d-flex">
-                <div class="col-3 col-lg-2">
+              <div class="author_box d-flex flex-column flex-sm-row">
+                <div class="col-12 col-sm-3 col-lg-2">
                   <div class="author_box__img">
                     <img
                       class="img-fluid"
@@ -384,9 +390,9 @@
                     />
                   </div>
                 </div>
-                <div class="col-9 col-lg-10">
+                <div class="col-12 col-sm-9 col-lg-10">
                   <div class="author_box__detail">
-                    <a href="#" class="author_name">Ryan Reynold</a>
+                    <a href="#" class="single_author_name">Ryan Reynold</a>
                     <ul class="author_social">
                       <li>
                         <a href="#">
@@ -404,11 +410,11 @@
                         </a>
                       </li>
                     </ul>
-                    <div class="author_desc">
+                    <p class="single_author_desc">
                       Sed quia cons quuntur magni dolores eos qui ratione
                       voluptatem sequi nesciunt. Neque porro quisquam est
                       voluptas sit sequi nesciunt.
-                    </div>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -419,19 +425,15 @@
             //////////////////////////////////////////////////// -->
 
             <div class="comment_section">
-              <h3>Comments</h3>
+              <h3 class="comment_section__heading">Comments</h3>
               <div class="reply_l1">
                 <div class="row">
-                  <div class="col-2">
+                  <div class="col-2 col-md-1">
                     <div class="commenter_img">
-                      <img
-                        class="img-fluid"
-                        src="assets/images/x11.webp"
-                        alt=""
-                      />
+                      <img src="assets/images/x11.webp" alt="" />
                     </div>
                   </div>
-                  <div class="col-10">
+                  <div class="col-10 col-md-11">
                     <div class="comment">
                       <div class="commenter_name">
                         <h4>Diane Gregory</h4>
@@ -446,74 +448,51 @@
                         can imagine yourself a kingdom. but nothing is ever
                         real.
                       </div>
-                      <div class="comment_reply">
+                      <a href="#" class="comment_reply">
                         <i class="fas fa-reply"></i><span>Reply</span>
-                      </div>
+                      </a>
                     </div>
-                  </div>
-                  <div class="reply_l2">
-                    <div class="row">
-                      <div class="col-2">
-                        <div class="commenter_img">
-                          <img
-                            class="img-fluid"
-                            src="assets/images/x10.webp"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                      <div class="col-10">
-                        <div class="comment">
-                          <a
-                            href="author.html"
-                            class="commenter_name author_commenter"
-                          >
-                            <h4>Diane Gregory</h4>
-                            <span>October 21, 2020 at 1:31 pm</span>
-                          </a>
-                          <div class="comment_content">
-                            There's good news, and there's bad news. The bad
-                            news is, it's not the drug. You're here, in the
-                            astral plane. You went too far in the make believe
-                            and got lost in your mind, consciousness, and now
-                            you're trapped in this, no place. Where every day is
-                            the same, where you can imagine yourself a kingdom.
-                            but nothing is ever real.
-                          </div>
-                          <div class="comment_reply">
-                            <i class="fas fa-reply"></i><span>Reply</span>
+                    <div class="reply_l2">
+                      <div class="row">
+                        <div class="col-2 col-md-1">
+                          <div class="commenter_img author_commenter">
+                            <img src="assets/images/x10.webp" alt="" />
                           </div>
                         </div>
-                      </div>
-                      <div class="reply_l3">
-                        <div class="row">
-                          <div class="col-2">
-                            <div class="commenter_img">
-                              <img
-                                class="img-fluid"
-                                src="assets/images/x11.webp"
-                                alt=""
-                              />
+                        <div class="col-10 col-md-11">
+                          <div class="comment">
+                            <a href="author.html" class="commenter_name">
+                              <h4>Ryan Reynold</h4>
+                              <span>October 21, 2020 at 1:31 pm</span>
+                            </a>
+                            <div class="comment_content">
+                              And what's the good news?
                             </div>
+                            <a href="#" class="comment_reply">
+                              <i class="fas fa-reply"></i><span>Reply</span>
+                            </a>
                           </div>
-                          <div class="col-10">
-                            <div class="comment">
-                              <div class="commenter_name">
-                                <h4>Diane Gregory</h4>
-                                <span>October 21, 2020 at 1:31 pm</span>
+                          <div class="reply_l3">
+                            <div class="row">
+                              <div class="col-2 col-md-1">
+                                <div class="commenter_img">
+                                  <img src="assets/images/x11.webp" alt="" />
+                                </div>
                               </div>
-                              <div class="comment_content">
-                                There's good news, and there's bad news. The bad
-                                news is, it's not the drug. You're here, in the
-                                astral plane. You went too far in the make
-                                believe and got lost in your mind,
-                                consciousness, and now you're trapped in this,
-                                no place. Where every day is the same, where you
-                                can imagine yourself a kingdom. but nothing is
-                                ever real.
-                              </div>
-                              <div class="comment_reply">
-                                <i class="fas fa-reply"></i><span>Reply</span>
+                              <div class="col-10 col-md-11">
+                                <div class="comment">
+                                  <div class="commenter_name">
+                                    <h4>Diane Gregory</h4>
+                                    <span>October 21, 2020 at 1:31 pm</span>
+                                  </div>
+                                  <div class="comment_content">
+                                    I'm not alone anymore.
+                                  </div>
+                                  <a href="#" class="comment_reply">
+                                    <i class="fas fa-reply"></i
+                                    ><span>Reply</span>
+                                  </a>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -525,117 +504,104 @@
               </div>
               <div class="reply_l1">
                 <div class="row">
-                  <div class="col-2">
-                    <div class="commenter_img">
-                      <img
-                        class="img-fluid"
-                        src="assets/images/x10.webp"
-                        alt=""
-                      />
+                  <div class="col-2 col-md-1">
+                    <div class="commenter_img author_commenter">
+                      <img src="assets/images/x10.webp" alt="" />
                     </div>
                   </div>
-                  <div class="col-10">
+                  <div class="col-10 col-md-11">
                     <div class="comment">
-                      <a
-                        href="author.html"
-                        class="commenter_name author_commenter"
-                      >
-                        <h4>Diane Gregory</h4>
+                      <a href="author.html" class="commenter_name">
+                        <h4>Ryan Reynold</h4>
                         <span>October 21, 2020 at 1:31 pm</span>
                       </a>
                       <div class="comment_content">
-                        There's good news, and there's bad news. The bad news
-                        is, it's not the drug. You're here, in the astral plane.
-                        You went too far in the make believe and got lost in
-                        your mind, consciousness, and now you're trapped in
-                        this, no place. Where every day is the same, where you
-                        can imagine yourself a kingdom. but nothing is ever
-                        real.
+                        It's just Thursday. Like the 260th Thursday as a
+                        passenger on the cruise ship "Mental Health." On the
+                        plus side I've mastered eating with a spoon.
                       </div>
-                      <div class="comment_reply">
+                      <a href="#" class="comment_reply">
                         <i class="fas fa-reply"></i><span>Reply</span>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="reply_l1">
                 <div class="row">
-                  <div class="col-2">
+                  <div class="col-2 col-md-1">
                     <div class="commenter_img">
-                      <img
-                        class="img-fluid"
-                        src="assets/images/x11.webp"
-                        alt=""
-                      />
+                      <img src="assets/images/x11.webp" alt="" />
                     </div>
                   </div>
-                  <div class="col-10">
+                  <div class="col-10 col-md-11">
                     <div class="comment">
                       <div class="commenter_name">
                         <h4>Diane Gregory</h4>
                         <span>October 21, 2020 at 1:31 pm</span>
                       </div>
                       <div class="comment_content">
-                        There's good news, and there's bad news. The bad news
-                        is, it's not the drug. You're here, in the astral plane.
-                        You went too far in the make believe and got lost in
-                        your mind, consciousness, and now you're trapped in
-                        this, no place. Where every day is the same, where you
-                        can imagine yourself a kingdom. but nothing is ever
-                        real.
+                        I know, I don't have to be afraid. But I am because look
+                        at you. All of you. You're gods, and someday you are
+                        going to wake up and realize you don't have to listen to
+                        us anymore.
                       </div>
-                      <div class="comment_reply">
+                      <a href="#" class="comment_reply">
                         <i class="fas fa-reply"></i><span>Reply</span>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="reply_section">
-              <h3>Leave a Reply</h3>
-              <p>
-                Your email address will not be published. Required fields are
-                marked *
-              </p>
-              <form action="">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="comment_text">
-                      <label for="reply_comment">Comment</label>
-                      <textarea
+              <div class="reply_section">
+                <h3>Leave a Reply</h3>
+                <p class="form-inst">
+                  Your email address will not be published. Required fields are
+                  marked *
+                </p>
+                <form action="">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="comment_text">
+                        <label for="reply_comment">Comment</label>
+                        <textarea
+                          class="form-control"
+                          id="reply_comment"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <label for="commenter_name" class="required">Name</label>
+                      <input
                         class="form-control"
-                        id="reply_comment"
-                      ></textarea>
+                        id="commenter_name"
+                        type="text"
+                      />
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <label for="commenter_email" class="required"
+                        >Email</label
+                      >
+                      <input
+                        class="form-control"
+                        id="commenter_email"
+                        type="email"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label for="commenter_web">Website</label>
+                      <input
+                        class="form-control"
+                        id="commenter_web"
+                        type="text"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <button type="submit">Submit</button>
                     </div>
                   </div>
-                  <div class="col-12 col-lg-6">
-                    <label for="commenter_name">Name</label>
-                    <input
-                      class="form-control"
-                      id="commenter_name"
-                      type="text"
-                    />
-                  </div>
-                  <div class="col-12 col-lg-6">
-                    <label for="commenter_email">Email</label>
-                    <input
-                      class="form-control"
-                      id="commenter_email"
-                      type="email"
-                    />
-                  </div>
-                  <div class="col-12">
-                    <label for="commenter_web">Website</label>
-                    <input
-                      class="form-control"
-                      id="commenter_web"
-                      type="text"
-                    />
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
 

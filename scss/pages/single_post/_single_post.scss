@@ -1,3 +1,6 @@
+@use '../../custom' as *;
+@use '../../components/mixins' as *;
+
 .single {
   &_post {
     &__author {
@@ -5,6 +8,183 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
+      }
+    }
+    &__meta {
+      margin: 20px 0;
+
+      .single_post_date {
+        display: inline-block;
+        margin-left: 15px;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: ".";
+          left: -11px;
+          top: -50%;
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__author {
+      display: inline-block;
+      margin-bottom: 20px;
+      img {
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
+
+    &__content {
+      .post_section {
+        margin-bottom: 30px;
+
+        .post_para {
+          margin-bottom: 25px;
+        }
+
+        .post_subheading {
+          margin-bottom: 25px;
+        }
+
+        .post_quote {
+          padding: 10px 20px;
+          border-left: 5px solid #eee;
+
+          .quote_author {
+            margin-left: 10px;
+            position: relative;
+
+            &::before {
+              @include pseudoTopLeft(50%, -10px);
+              transform: translateY(-50%);
+              height: 2px;
+              width: 8px;
+              background-color: #777;
+            }
+          }
+        }
+      }
+    }
+    .social_share {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      padding-left: 0;
+      text-align: center;
+      li {
+        display: inline-block;
+        padding: 0 15px;
+        position: relative;
+
+        &:not(:first-child)::before {
+          @include pseudoTopLeft(50%, 0);
+          transform: translateY(-50%);
+          height: 10px;
+          width: 1px;
+          background-color: #a0a0a0;
+        }
+        a {
+          transition: 0.3s;
+          &:hover {
+            color: rgba(black, 0.4);
+          }
+        }
+      }
+    }
+
+    hr {
+      background-color: rgba(black, 0.4);
+    }
+
+    .post_nav {
+      margin-bottom: 50px;
+      .next_post {
+        text-align: right;
+      }
+
+      .prev_post,
+      .next_post {
+        width: 45%;
+        span {
+          margin: 0 10px;
+          line-height: 20px;
+          display: inline-block;
+          margin-bottom: 15px;
+        }
+
+        i {
+          height: 20px;
+          width: 20px;
+          line-height: 20px;
+          text-align: center;
+          border-radius: 50%;
+          border: 1px solid rgba(black, 0.8);
+          transition: 0.3s;
+        }
+
+        &:hover {
+          i {
+            color: white;
+            background-color: $primary;
+            border: none;
+          }
+        }
+      }
+    }
+    .author_box {
+      &__img {
+        display: inline-block;
+
+        @include media-breakpoint-down(sm) {
+          display: block;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+        }
+      }
+
+      .single_author_name {
+        @include media-breakpoint-down(sm) {
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+
+      .author_social {
+        display: inline-flex;
+        padding-left: 20px;
+        margin-bottom: 15px;
+
+        @include media-breakpoint-down(sm) {
+          padding-left: 0;
+        }
+
+        li {
+          padding: 0 5px;
+          a {
+            color: #b2b2b2;
+            font-size: 12px;
+            vertical-align: top;
+          }
+        }
+      }
+      .single_author_desc {
+        width: 60%;
+
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
       }
     }
   }

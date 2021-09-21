@@ -14,15 +14,21 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
 
+// Custom Container Width
+$container-max-widths: (
+  sm: 540px,
+  md: 750px,
+  lg: 970px,
+  xl: 1200px,
+  xxl: 1320px,
+);
+
 // * {
 //   outline: 2px solid red;
 // }
-
 // *::before,
 // *::after {
 //   outline: 2px solid red;
 // }
-
 // importing bootstrap
-
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

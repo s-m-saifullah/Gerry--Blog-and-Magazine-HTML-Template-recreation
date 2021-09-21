@@ -1,5 +1,7 @@
 $(function(){
 
+    var docHeight = $("body").innerHeight();
+
     $(window).on ('scroll', function(){
 
         // SIDEBAR STICKY ON SCROLL DOWN
@@ -76,7 +78,5 @@ $(function(){
     $('.b2t_btn').on('click', function(){
         $('html, body').animate({scrollTop: 0}, 1000)
     })
-
-    
       
 })
